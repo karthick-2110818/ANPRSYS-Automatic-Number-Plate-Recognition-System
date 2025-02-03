@@ -1,0 +1,6 @@
+train: C:\Users\karth\Desktop\ANPR\Automatic-Number-Plate-Recognition--ANPR-\dataset\train\images
+val: C:\Users\karth\Desktop\ANPR\Automatic-Number-Plate-Recognition--ANPR-\dataset\valid\images
+test: C:\Users\karth\Desktop\ANPR\Automatic-Number-Plate-Recognition--ANPR-\dataset\test\images
+
+nc: 1
+names: ['licence']
