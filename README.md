@@ -1,43 +1,46 @@
-# Automatic-Number-Plate-Recognition--ANPR-
-Automatic Number Plate Recognition (ANPR) Using YOLOv8 and easyOCR
+# 🚗 ANPRSYS - Automatic Number Plate Recognition System
 
-![image](https://github.com/AarohiSingla/Automatic-Number-Plate-Recognition--ANPR-/assets/60029146/f9e79b40-b887-4804-85c3-380dbda7a2a7)
+## 📌 Overview  
+**Automatic Number Plate Recognition (ANPR)** is an advanced technology that utilizes computer vision and machine learning to detect, recognize, and extract vehicle license plates from images or video streams. It plays a vital role in:  
 
-YOutube Video link: https://www.youtube.com/watch?v=1qVxaK1V074
+✅ **Traffic Management** – Monitoring traffic flow, identifying rule violations, and reducing congestion.  
+✅ **Law Enforcement** – Identifying stolen vehicles, tracking suspects, and enhancing public safety.  
+✅ **Parking Management** – Automating parking lots, access control, and fee collection.  
+✅ **Toll Collection** – Enabling fast, automated toll transactions without manual intervention.  
+✅ **Border Security** – Identifying and monitoring vehicles crossing international borders.  
 
-
-
-!pip install ultralytics==8.0.0
-
-!pip install easyocr
-
-!git clone https://github.com/AarohiSingla/Automatic-Number-Plate-Recognition--ANPR-.git
-
-cd Automatic-Number-Plate-Recognition--ANPR--main
+---
 
 
-#### To train your model on License plate detection:
+## 🛠️ System Requirements  
 
-from ultralytics import YOLO
+To ensure smooth execution of the ANPR system, you need the following dependencies installed:
 
-###### Load a model
-model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
+### **🔧 Software Requirements**  
+1️⃣ **Python (any version)** – Core programming language for the ANPR system.  
+2️⃣ **Anaconda (optional)** – Manages environments and dependencies efficiently.  
+3️⃣ **Jupyter Notebook** – Interactive coding and debugging environment.  
+4️⃣ **Visual Studio Code (VS Code)** – Alternative IDE for development.  
 
-###### Train the model
-results = model.train(data='data.yaml', epochs=200, imgsz=640) 
+### **🖥️ Machine Learning & Deep Learning Requirements**  
+5️⃣ **PyTorch** – Deep learning framework for training and inference.  
+6️⃣ **YOLOv8 by Ultralytics** – Object detection model for number plate recognition.  
+7️⃣ **EasyOCR** – Optical character recognition (OCR) for extracting text from plates.  
+8️⃣ **CUDA/cuDNN (Optional, for GPU acceleration)** – Required for faster deep learning model execution.  
+
+**💡 Note:** GPU acceleration is recommended for training large datasets but not mandatory for inference. 
+
+![image](https://github.com/user-attachments/assets/9fea08f0-ac7f-4870-bd59-b6070372264f)
+
+![image](https://github.com/user-attachments/assets/e0ee06a6-d611-41f1-852e-db40a52cf04b)
+
+![image](https://github.com/user-attachments/assets/abe90a9f-4b36-4648-9c67-084614de08c0)
 
 
-#### Test the yolov8 model:
-
-###### Load a pretrained YOLOv8n model
-model = YOLO('ultralytics/runs/detect/train_model/weights/best.pt')
-
-###### Run inference on video
-model.predict('test_vid.mp4', save=True, imgsz=320, conf=0.2)
 
 
 
-#### To perform Detection and Recognition (YOLOv8 + easyOCR) run the below command: 
+---
 
-!python predict_modified.py model='ultralytics/runs/detect/train_model/weights/best.pt' source='test_vid.mp4' 
-#
+
+
